@@ -26,13 +26,15 @@
         <docker.push>false</docker.push>
 
         <!-- Dependencies -->
-        <quarkus.version>2.2.5.Final</quarkus.version>
+        <quarkus.version>2.7.5.Final</quarkus.version>
         <jandex-maven-plugin.version>1.2.1</jandex-maven-plugin.version>
         <jandex.version>2.4.1.Final</jandex.version>
         <kafka.version>3.0.0</kafka.version>
         <strimzi-oauth.version>0.8.1</strimzi-oauth.version>
         <smallrye-openapi.version>2.1.20</smallrye-openapi.version>
         <hamcrest.version>2.1</hamcrest.version>
+        <fasterxml.jackson.version>2.13.2</fasterxml.jackson.version>
+        <fasterxml.jackson-databind.version>2.13.2.1</fasterxml.jackson-databind.version>
 
         <!-- Plugin Versions -->
         <maven.compiler.version>3.9.0</maven.compiler.version>
@@ -88,6 +90,26 @@
                 <groupId>io.strimzi</groupId>
                 <artifactId>kafka-oauth-common</artifactId>
                 <version>${strimzi-oauth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${fasterxml.jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${fasterxml.jackson-databind.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>${fasterxml.jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${fasterxml.jackson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
